@@ -1,0 +1,276 @@
+/* General Styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url("https://lh3.googleusercontent.com/d/1zvB0PNLNaBJzKDoKkFZyiw-5V6E9DnCk=s1600");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscura */
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #F1C435; /* Amarillo Linguaventura */
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons a {
+    padding: 15px 40px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #027B63; /* Verde Linguaventura */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #F1C435;
+    border: 2px solid #F1C435;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
+}
+
+/* Features Section */
+.section-features {
+    padding: 60px 0;
+    background-color: #F3CA99; /* Crema */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #027B63;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #027B63;
+    margin-bottom: 15px;
+}
+
+/* Section nuestro equipo */
+.section_developers {
+    background-color: #f29545;
+  }
+  .developers {
+    display: flex;
+    align-items: start;
+    background: #f29545;
+  }
+  .developers .box {
+    flex: 1;
+    background: #f3ca99;
+    color: black;
+    border-radius: 10px;
+    margin: 20px 10px;
+    padding: 15px 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .developers .box:nth-of-type(1) {
+    flex-grow: 4;
+  }
+  .developers .box:nth-of-type(2) {
+    flex-grow: 4;
+  }
+  .developers .box:nth-of-type(3) {
+    flex-grow: 4;
+  }
+  .developers .box2 {
+    flex: 1;
+    background: #f3ca99;
+    color: black;
+    border-radius: 10px;
+    margin: 20px 10px;
+    padding: 15px 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .developers .box2:nth-of-type(1) {
+    flex-grow: 4;
+  }
+  .developers .box2:nth-of-type(2) {
+    flex-grow: 4;
+  }
+  .developers .box2:nth-of-type(3) {
+    flex-grow: 4;
+    background: #f29545;
+  }
+  .section_container_buttons_developers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 0px;
+    margin: 0px 0px;
+  }
+  .btn_developers {
+    padding: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #f3ca99;
+    border: 2px solid #f29545;
+  }
+  .btn_developers:hover {
+    color: #fff;
+    background-color: #f29545;
+    border: 2px solid #f29545;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .header_home {
+      flex-direction: column;
+    }
+    .developers {
+      flex-direction: column;
+    }
+    .section_container_buttons_developers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+/* Testimonials Section */
+.section-testimonials {
+    padding: 60px 0;
+    background-color: #F1C435; /* Amarillo Linguaventura */
+    color: #333;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Call to Action */
+.section-call-to-action {
+    padding: 60px 0;
+    background-color: #027B63;
+    color: white;
+    text-align: center;
+}
+
+.section-call-to-action h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section-call-to-action p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-call-to-action .btn {
+    background-color: #F1C435;
+    color: #027B63;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.section-call-to-action .btn:hover {
+    background-color: #F2A534; /* Naranja */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

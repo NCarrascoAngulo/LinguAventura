@@ -1,0 +1,122 @@
+/* Colors */
+:root {
+    --verde: #006d5b; /* Verde oscuro refinado */
+    --dorado: #c19d56; /* Dorado elegante */
+    --blanco-crema: #fdfcf6; /* Blanco crema para suavizar */
+    --gris-suave: #eaeaea; /* Gris para fondos ligeros */
+    --texto-dorado: #b89f5d; /* Tonalidad para resaltar el texto */
+    --texto-oscuro: #333; /* Para contraste */
+  }
+  
+  /* Google Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap");
+  
+  /* Global CSS Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--blanco-crema);
+    color: var(--texto-oscuro);
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, .logo {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: var(--verde);
+  }
+  .container {
+    margin: auto;
+    max-width: 1200px;
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  a:hover {
+    color: var(--dorado);
+  }
+  
+  /* Navbar */
+  .section_light_talk_app_navbar {
+    background-color: var(--blanco-crema);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--gris-suave);
+  }
+  .light_talk_app_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 80px;
+  }
+  .light_talk_app_navbar .logo {
+    font-size: 28px;
+    color: var(--dorado);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .light_talk_app_navbar ul {
+    display: flex;
+    list-style: none;
+  }
+  .light_talk_app_navbar li {
+    margin: 0 15px;
+  }
+  .light_talk_app_navbar a {
+    font-size: 18px;
+    color: var(--verde);
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+  }
+  .light_talk_app_navbar a:hover {
+    background-color: var(--dorado);
+    color: var(--blanco-crema);
+  }
+  
+  /* Footer */
+  .section_footer {
+    background-color: var(--verde);
+    padding: 40px 0;
+    text-align: center;
+    color: var(--blanco-crema);
+  }
+  .footer {
+    font-size: 14px;
+  }
+  .footer a {
+    color: var(--dorado);
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Query */
+  @media (max-width: 768px) {
+    .light_talk_app_navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+    .light_talk_app_navbar ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .light_talk_app_navbar li {
+      margin: 10px 0;
+    }
+    .light_talk_app_navbar a {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
