@@ -12,12 +12,31 @@
                     Vive el Lujo, la Aventura y el Español
                 </h1>
                 <p class="hero-description">
-                    Explora España como nunca antes. Disfruta de un entorno de lujo, aprende español inmerso en la cultura y crea recuerdos únicos en un destino exclusivo diseñado para ti.
+                    Aquí no solo aprenderás un idioma, sino que vivirás una aventura inolvidable que te conectará con nuevas personas, la cultura española y contigo mismo. ¡Te esperamos para vivir esta experiencia única en el corazón de España!
                 </p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Reserva Ahora</a>
-                    <a href="#" class="btn btn-secondary">Descubre Más</a>
+                
+                {% if current_user.is_authenticated %} {% else %}
+                <div class="container_buttons_links_header_home">
+                  <div class="btn">
+                    <a
+                      href="{{url_for('users.register')}}"
+                      class="btn btn-primary btn-lg mr-2"
+                      ,
+                      style="background-color: #007bff"
+                      >Register</a
+                    >
+                  </div>
+                  <div class="btn">
+                    <a
+                      href="{{url_for('users.login')}}"
+                      class="btn btn-primary btn-lg mr-2"
+                      ,
+                      style="background-color: #007bff"
+                      >Login</a
+                    >
+                  </div>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -43,6 +62,11 @@
                 <h3>Actividades Inolvidables</h3>
                 <p>Desde senderismo hasta clases de flamenco, vive la emoción y la autenticidad de España.</p>
             </div>
+            <div class="feature">
+              <i class="feature-icon fas fa-progress"></i>
+              <h3> Seguimiento en tu progreso</h3>
+              <p>A través de nuestra aplicación exclusiva, podrás seguir tu progreso, alcanzar logros y compartir tu experiencia en redes sociales. </p>
+          </div>
         </div>
     </div>
 </section>
@@ -50,119 +74,132 @@
 <section class="section_developers">
     <div class="container">
       <div class="developers" style="display: block">
-        <h1 style="text-align: center">Our Team</h1>
+        <h1 style="text-align: center">Nuestro Equipo</h1>
         <p>
-          Nuestro equipo de lingüistas, economistas, educadores y programadores….
-          ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut?
-          Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat
-          ullam, pariatur iure unde ratione ipsum adipisci repellendus,
-          repudiandae hic sit, temporibus molestias corrupti aut soluta sequi!
-          Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis
-          placeat neque porro, animi incidunt consectetur. Maiores ab saepe
-          tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque
-          reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga
-          quasi nesciunt dolor iste, inventore necessitatibus unde!
+          En Linguaventura, contamos con un equipo apasionado y diverso que combina experiencia,
+          creatividad y profesionalismo. Cada miembro es un experto en su área, comprometido con
+          brindarte una experiencia inolvidable que equilibra lujo, aprendizaje y aventura.
         </p>
       </div>
 
       <div class="developers">
         <div class="box">
           <img
-            src="https://randomuser.me/api/portraits/men/10.jpg"
+            src="https://lh3.googleusercontent.com/d/1eq7IEvmEaCnG4v-CvAm7LPWi0qZO_hJI=s1600"
             alt=""
             style="border-radius: 50%; width: 200px"
           />
-          <h3>Developer 1</h3>
+          <h3>Ángel Fernández</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia
-            repellat omnis? Odit enim hic atque dolorem iste natus inventore
-            perspiciatis vitae dolore animi veritatis aut nemo unde similique,
-            officia reiciendis ex architecto voluptates soluta ab tempore facilis
-            quisquam cum.
+            Como uno de los promotores del proyecto, mi pasión es diseñar experiencias 
+            que conecten profundamente a las personas con el destino que visitan, fusionando
+            autenticidad, emoción y descubrimiento en cada recorrido. Con una visión centrada en
+            el detalle y un compromiso con la calidad, me enfoco en crear itinerarios únicos que transformen
+            cada viaje en una aventura personal, explorando no solo los lugares, sino también las historias,
+            sabores y tradiciones que los hacen especiales.
           </p>
           <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#" target="_blank">Curriculum</a>
           </div>
         </div>
         <div class="box">
           <img
-            src="https://randomuser.me/api/portraits/women/11.jpg"
+            src="https://lh3.googleusercontent.com/d/1a69cFE0NHfL9mrSXIm9luPPhN-Tvy4vg=s1600"
             alt=""
             style="border-radius: 50%; width: 200px"
           />
-          <h3>Developer 2</h3>
+          <h3>Alessia Citro</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia
-            repellat omnis? Odit enim hic atque dolorem iste natus inventore
-            perspiciatis vitae dolore animi veritatis aut nemo unde similique,
-            officia reiciendis ex architecto voluptates soluta ab tempore facilis
-            quisquam cum.
+            Este proyecto me apasiona porque combina dos de mis grandes intereses: el marketing y los viajes. 
+            La idea de crear una experiencia inmersiva que conecte a las personas con la cultura española, 
+            mientras disfrutan de la naturaleza y aprenden un idioma, me resulta inspiradora. Además, veo en 
+            Linguaventura una oportunidad para aplicar mis conocimientos en un proyecto que promueve valores 
+            como la sostenibilidad, la educación y la aventura.
           </p>
           <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#" target="_blank">Curriculum</a>
           </div>
         </div>
         <div class="box">
           <img
-            src="https://randomuser.me/api/portraits/men/12.jpg"
+            src="https://lh3.googleusercontent.com/d/1FBtmrZTB87l6Y4a4GlMHicNCE9qEvtIp=s1600"
             alt=""
             style="border-radius: 50%; width: 200px"
           />
-          <h3>Developer 3</h3>
+          <h3>Nicol Carrasco</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia
-            repellat omnis? Odit enim hic atque dolorem iste natus inventore
-            perspiciatis vitae dolore animi veritatis aut nemo unde similique,
-            officia reiciendis ex architecto voluptates soluta ab tempore facilis
-            quisquam cum.
+            Como parte de este proyecto, me inspira la idea de crear experiencias
+             que no solo sean memorables, sino también transformadoras. 
+             Creo en la magia de conectar con nuevas culturas, personas y paisajes, 
+             y en cómo cada momento puede convertirse en una historia que contar. 
+             Me gusta enfocarme en los detalles que marcan la diferencia, asegurándome 
+             de que cada experiencia sea auténtica, emocionante y significativa para 
+             quienes la viven.
           </p>
           <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#" target="_blank">Curriculum</a>
           </div>
         </div>
       </div>
-
+      <h6></h6>
       <div class="developers">
         <div class="box2">
           <img
-            src="https://randomuser.me/api/portraits/women/12.jpg"
+            src="https://lh3.googleusercontent.com/d/1pZHJlxJCimGve1y5bcBlV2K06_achSZF=s1600"
             alt=""
             style="border-radius: 50%; width: 200px"
           />
-          <h3>Developer 4</h3>
+          <h3>Ana Rivera</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia
-            repellat omnis? Odit enim hic atque dolorem iste natus inventore
-            perspiciatis vitae dolore animi veritatis aut nemo unde similique,
-            officia reiciendis ex architecto voluptates soluta ab tempore facilis
-            quisquam cum.
+            Como participante en el desarrollo de este proyecto, me implico en él, porque creo que los viajes son una gran experiencia para las personas y creo que este combina innovación, cultura y naturaleza para ofrecer algo único. Me esfuerzo por cuidar cada detalle, y que esta experiencia se convierta para las personas en mucho más que un recuerdo.
           </p>
           <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#" target="_blank">Curriculum</a>
           </div>
         </div>
         <div class="box2">
           <img
-            src="https://randomuser.me/api/portraits/women/13.jpg"
+            src="https://lh3.googleusercontent.com/d/1FFn_pWC84btPHNRdbnhJkTonXYPxst0H=s1600"
             alt=""
             style="border-radius: 50%; width: 200px"
           />
-          <h3>Developer 5</h3>
+          <h3>Heming Xi</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia
-            repellat omnis? Odit enim hic atque dolorem iste natus inventore
-            perspiciatis vitae dolore animi veritatis aut nemo unde similique,
-            officia reiciendis ex architecto voluptates soluta ab tempore facilis
-            quisquam cum.
+            Este proyecto representa un nuevo desafío personal que me entusiasma profundamente. Ha sido una oportunidad invaluable para ampliar mis conocimientos y adquirir nuevas perspectivas, enriqueciendo mi aprendizaje y desarrollo profesional.
           </p>
           <div class="section_container_buttons_developers">
-            <a class="btn_developers" href="#" target="_blank">Curriculum</a>
           </div>
         </div>
-        <div class="box2"></div>
+        <div class="box2">
+          <img
+            src="https://lh3.googleusercontent.com/d/1EolNcWRnYz0luxRRH1P20IGjcFdQWbDY=s1600"
+            alt=""
+            style="border-radius: 50%; width: 200px"
+          />
+          <h3>Paul Amores</h3>
+          <p>
+            He elegido este proyecto porque combina mi interés en la tecnología con la enseñanza de idiomas, además de ofrecer una solución innovadora para quienes buscan aprender español mientras disfrutan de una experiencia en el ámbito hotelero. Como participante del proyecto, me motivó la idea de crear una plataforma que fusione ambos mundos y facilite el aprendizaje de manera interactiva y accesible para todos.
+          </p>
+          <div class="section_container_buttons_developers">
+          </div>
+        </div>
+  </div>
+  <h6></h6>
+  <div class="developers">      
+      
+        <div class="box3">
+          <img
+            src="https://lh3.googleusercontent.com/d/1DZkqa3m10VRGQNqWg48R4crABG8eCKi4=s1600"
+            alt=""
+            style="border-radius: 50%; width: 200px"
+          />
+          <h3>Yu Xiao</h3>
+          <p>
+            Espero que a través de mi diseño, cada viajero pueda encontrar sus propios recuerdos únicos en el viaje y despertar su profundo deseo de exploración y descubrimiento.
+          </p>
+          <div class="section_container_buttons_developers">
+          </div>
+        </div>
       </div>
     </div>
-</section>
+  </section>
+
 
 <!-- Testimonios -->
 <section class="section-testimonials">
@@ -186,8 +223,9 @@
     <div class="container">
         <h2>Reserva tu Lugar en Linguaventura</h2>
         <p>No pierdas la oportunidad de vivir una experiencia que transformará tu vida. Descubre el lujo, la aventura y la cultura española.</p>
-        <a href="#" class="btn btn-primary">Comienza Ahora</a>
+        <a href= "{{url_for('users.register')}}" class="btn btn-primary">Comienza Ahora</a>
     </div>
 </section>
 
 {% endblock content %}
+
