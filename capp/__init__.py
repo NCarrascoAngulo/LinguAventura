@@ -6,25 +6,25 @@ import os
 
 application = Flask(__name__)
 
-application.config['SECRET_KEY'] = '3oueqkfdfas8jhdfjdsr8ewrewrouewrere44554'
+### Code GitHub
+# application.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
-# Base de datos GitHub
-# DBVAR = f"postgresql://{os.environ['RDS_USERNAME']}:{os.environ['RDS_PASSWORD']}@{os.environ['RDS_HOSTNAME']}/{os.environ['RDS_DB_NAME']}"
-#DBVAR = 'postgresql://postgres:carrasco1234@endpoint:5432/ebdb'
-#application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR 
-#application.config['SQLALCHEMY_BINDS'] ={'sentence': DBVAR}
-#db = SQLAlchemy(application)
+### Code Computer
+application.config['SECRET_KEY'] = '3oueqkfdfas8ruewqndr8ewrewrouewrere44554'
 
-
-# Base de datos ordenador
-#DBVAR = 'sqlite:///user.db'
-#application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
-#application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
-#db = SQLAlchemy(application)
+# Base de datos
+DBVAR = 'sqlite:///user.db'
+application.config['SQLALCHEMY_DATABASE_URI'] = DBVAR
+application.config['SQLALCHEMY_BINDS'] ={'sentence': 'sqlite:///sentence_table.db'}
+db = SQLAlchemy(application)
 
 # Bcrypt
-#bcrypt = Bcrypt(application)
+bcrypt = Bcrypt(application)
 
+# Login
+login_manager= LoginManager(application)
+login_manager.login_view = 'users.login'
+login_manager.login_message_category = 'info'
 
 from capp.home.routes import home
 from capp.business.routes import business
