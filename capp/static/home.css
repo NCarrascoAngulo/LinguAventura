@@ -1,11 +1,11 @@
 /* General Styles */
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 /* Hero Section */
@@ -18,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -26,7 +27,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay oscura */
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -37,14 +38,14 @@ body {
 }
 
 .hero-title {
-    font-size: 60px;
+    font-size: 4rem;
     font-weight: bold;
-    color: #F1C435; /* Amarillo Linguaventura */
+    color: #F1C435;
     margin-bottom: 20px;
 }
 
 .hero-description {
-    font-size: 20px;
+    font-size: 1.2rem;
     margin-bottom: 30px;
     line-height: 1.8;
     max-width: 700px;
@@ -59,14 +60,15 @@ body {
 
 .cta-buttons a {
     padding: 15px 40px;
-    font-size: 18px;
+    font-size: 1rem;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary {
-    background-color: #027B63; /* Verde Linguaventura */
+    background-color: #027B63;
     color: white;
 }
 
@@ -77,28 +79,31 @@ body {
 }
 
 .btn-primary:hover, .btn-secondary:hover {
-    opacity: 0.8;
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 /* Features Section */
 .section-features {
     padding: 60px 0;
-    background-color: #F3CA99; /* Crema */
+    background-color: #F3CA99;
 }
 
 .section-title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 40px;
     color: #027B63;
+    text-transform: uppercase;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .feature {
@@ -107,123 +112,103 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .feature-icon {
-    font-size: 40px;
+    font-size: 2rem;
     color: #027B63;
     margin-bottom: 15px;
 }
 
-/* Section nuestro equipo */
+/* Developers Section */
 .section_developers {
     background-color: #f29545;
-  }
-  .developers {
-    display: flex;
-    align-items: start;
-    background: #f29545;
-  }
-  .developers .box {
-    flex: 1;
+    padding: 60px 20px;
+}
+
+.developers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mejora de distribución */
+    gap: 20px; /* Mayor espaciado entre tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.developers .box,
+.developers .box2,
+.developers .box3 {
     background: #f3ca99;
     color: black;
     border-radius: 10px;
-    margin: 20px 10px;
-    padding: 15px 20px;
+    padding: 20px;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .developers .box:nth-of-type(1) {
-    flex-grow: 4;
-  }
-  .developers .box:nth-of-type(2) {
-    flex-grow: 4;
-  }
-  .developers .box:nth-of-type(3) {
-    flex-grow: 4;
-  }
-  .developers .box2 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developers .box:hover,
+.developers .box2:hover,
+.developers .box3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes específicos para box3 */
+.developers .box3 {
     flex: 1;
-    background: #f3ca99;
-    color: black;
-    border-radius: 10px;
-    margin: 20px 10px;
-    padding: 15px 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .developers .box2:nth-of-type(1) {
-    flex-grow: 4;
-  }
-  .developers .box2:nth-of-type(2) {
-    flex-grow: 4;
-  }
-  .developers .box2:nth-of-type(3) {
-    flex-grow: 4;
-    background: #f29545;
-  }
-  .section_container_buttons_developers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0px 0px;
-    margin: 0px 0px;
-  }
-  .btn_developers {
-    padding: 10px 10px;
-    margin: 10px 10px 10px 10px;
+    min-width: 250px;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Buttons in Developers Section */
+.btn_developers {
+    padding: 10px 20px;
+    margin-top: 10px;
     color: #fff;
+    background-color: #027B63;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 18px;
-    background-color: #f3ca99;
-    border: 2px solid #f29545;
-  }
-  .btn_developers:hover {
-    color: #fff;
-    background-color: #f29545;
-    border: 2px solid #f29545;
-    text-decoration: none;
-  }
-  
-  @media (max-width: 768px) {
-    .header_home {
-      flex-direction: column;
-    }
-    .developers {
-      flex-direction: column;
-    }
-    .section_container_buttons_developers {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_developers:hover {
+    background-color: #025B4D;
+}
+
 /* Testimonials Section */
 .section-testimonials {
-    padding: 60px 0;
-    background-color: #F1C435; /* Amarillo Linguaventura */
+    padding: 60px 20px;
+    background-color: #F1C435;
     color: #333;
+    text-align: center;
 }
 
 .testimonials-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .testimonial {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 500px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial p {
@@ -232,45 +217,53 @@ body {
 
 /* Call to Action */
 .section-call-to-action {
-    padding: 60px 0;
-    background-color: #027B63;
+    padding: 60px 20px;
+    background-color: #f3ca99;
     color: white;
     text-align: center;
 }
 
 .section-call-to-action h2 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-.section-call-to-action p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
+    text-transform: uppercase;
 }
 
 .section-call-to-action .btn {
     background-color: #F1C435;
     color: #027B63;
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 1rem;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .section-call-to-action .btn:hover {
-    background-color: #F2A534; /* Naranja */
+    background-color: #F2A534;
+    transform: scale(1.05);
 }
 
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .developers {
+        grid-template-columns: 1fr; /* Una tarjeta por fila en pantallas pequeñas */
+        gap: 40px; /* Espaciado menor en dispositivos pequeños */
+    }
+
+    .developers .box3 {
+        max-width: 100%; /* Usar todo el ancho disponible en móvil */
     }
 }
