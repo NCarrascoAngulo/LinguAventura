@@ -1,36 +1,56 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1 style="color:blue; text-align: center">Modelo de negocio</h1>
 
-    <p>
-        Nuestro modelo de negocio esta basado en dos pilares ....           
-    </p>
+<section class="model-section">
+    <div class="container">
+        <h1 class="title">Modelo de Negocio</h1>
 
-    <p>
-        <strong>Modelo de negocio. A continuación describimos brevemente nuestro modelo de negocio:</strong>
-        <ol>
-            <li>
-                Primer pilar ...
-            </li>
-            <li>
-                Segundo pilar ...
-            </li>
-        </ol>
-    </p>
+        <div class="card-grid">
+            <!-- Card 1: Introducción -->
+            <div class="container">
+                <div class="card-image-container">
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Descubre la Experiencia Linguaventura</h2>
+                    <p>
+                        Nuestro hotel ofrece una inmersión completa en el idioma y la cultura española, diseñada para jóvenes internacionales de 20 a 30 años que buscan algo más que unas vacaciones convencionales. En un entorno natural espectacular, disfrutarás de alojamiento de alta gama combinado con actividades emocionantes, como senderismo, talleres de cocina y deportes acuáticos, todo mientras practicas español con hablantes nativos.
+                    </p>
+                </div>
+            </div>
 
-    <p>Para conocer más sobre nuestro equipo visitar nuestra página principal (<a href="{{ url_for('home.home_home') }}">enlace</a>)
+            <!-- Card 2: Propuesta de Valor -->
+            <div class="container">
+                <div class="card-content">
+                    <h2 class="card-title">Propuesta de Valor</h2>
+                    <p>
+                        A través de nuestra aplicación exclusiva, podrás seguir tu progreso, alcanzar logros y compartir tu experiencia en redes sociales. Aquí no solo aprenderás un idioma, sino que vivirás una aventura inolvidable que te conectará con nuevas personas, la cultura española y contigo mismo.
+                    </p>
+                </div>
+            </div>
 
-    </p>
+            <!-- Card 3: Modelo de Negocio -->
+            <div class="container">
+                <div class="card-image-container">
+                
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">Nuestros Pilares</h2>
+                    <ul class="card-list">
+                        <li><strong>Inmersión Lingüística:</strong> Clases y actividades diarias con hablantes nativos.</li>
+                        <li><strong>Turismo de Aventura:</strong> Senderismo, deportes acuáticos y visitas culturales.</li>
+                        <li><strong>Sostenibilidad:</strong> Prácticas ecoamigables integradas en todas nuestras operaciones.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <p>
-        <strong>Bibliografía:</strong>
-        <ul>
-            <li>
-                <strong>Artículo 1</strong>: Breve resumen.
-            </li>
-            <li>
-                <strong>Artículo 2</strong>: Breve resumen.
-            </li>
-        </ul>
-    </p>
+        <div class="footer-links">
+            <p>
+                Conoce más sobre nuestro modelo de negocio 
+                <a href="https://drive.google.com/file/d/1rlOojtrc_ftMdXm9OdoF_Yt645tACBC0/view?usp=sharing" class="cta-link">Plan de negocio</a>.
+            </p>
+        </div>
+    </div>
+</section>
+
 {% endblock content %}
