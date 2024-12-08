@@ -1,0 +1,99 @@
+/* Utilities */
+p {
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+}
+h4 {
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Section header */
+.section_header_light_talk_app {
+  background-color: #f3ca99;
+}
+.header_light_talk_app {
+  display: flex;
+  align-items: start;
+  background: #f3ca99;
+}
+.header_light_talk_app .box {
+  flex: 1;
+  background: #f3ca99;
+  color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.header_light_talk_app .box:nth-of-type(1) {
+  flex-grow: 2;
+}
+.header_light_talk_app .box:nth-of-type(2) {
+  flex-grow: 1;
+}
+.container_buttons_links_header_light_talk_app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container_buttons_links_header_light_talk_app a:hover {
+  color: #f3ca99;
+}
+
+/* Section intro */
+.section_light_talk_app_intro {
+  background-color: #fff7e6;
+  padding: 40px 20px;
+}
+.section_light_talk_app_intro .box {
+  flex: 1;
+  background: #fff7e6;
+  color: #333;
+  margin: 20px 10px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #f3ca99;
+  border-radius: 10px;
+}
+.section_light_talk_app_intro h3 {
+  color: #f26934;
+}
+.section_light_talk_app_intro p {
+  color: #666;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #f26934;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid #f3ca99;
+  margin: 5px;
+}
+.btn:hover {
+  background-color: #f3ca99;
+  color: #fff;
+  border-color: #f3ca99;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header_light_talk_app {
+    flex-direction: column;
+  }
+  .section_light_talk_app_intro {
+    padding: 20px;
+  }
+  .section_light_talk_app_intro .box {
+    margin: 10px 0;
+  }
+}
