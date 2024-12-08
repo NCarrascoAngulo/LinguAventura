@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Font Awesome code
+   <!-- Font Awesome code
      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -9,7 +9,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     /> -->
-   
+  
 
     <!--Import the Bootstrap CSS file:-->
     <link
@@ -60,13 +60,11 @@
               ><i class="fa-solid fa-comment-dots"></i> LinguAventura</span
             >
           </h1>
+          {% if current_user.is_authenticated %}
           <nav>
             <ul>
               <li>
-                <a href="{{url_for('users.register')}}">Register</a>
-              </li>
-              <li>
-                <a href="{{url_for('users.login')}}">Log in</a>
+                <a href="{{url_for('users.logout')}}">Logout</a>
               </li>
               <li>
                 <a href="{{url_for('home.home_home')}}">Home</a>
@@ -74,13 +72,26 @@
               <li>
                 <a href="{{url_for('business.business_home')}}">Business</a>
               </li>
+            </ul>
+          </nav>
+          {% else %}
+          <nav>
+            <ul>
               <li>
-                <a href="{{url_for('light_talk_app.light_talk_app_home')}}"
-                  >Light Talk App</a
-                >
+                <a href="{{url_for('users.register')}}">Register</a>
+              </li>
+              <li>
+                <a href="{{url_for('users.login')}}">Login</a>
+              </li>
+              <li>
+                <a href="{{url_for('home.home_home')}}">Home</a>
+              </li>
+              <li>
+                <a href="{{url_for('business.business_home')}}">Business</a>
               </li>
             </ul>
           </nav>
+          {% endif %}
         </div>
       </div>
     </section>
