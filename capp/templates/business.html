@@ -1,56 +1,88 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 
-<section class="model-section">
-    <div class="container">
-        <h1 class="title">Modelo de Negocio</h1>
-
-        <div class="card-grid">
-            <!-- Card 1: Introducción -->
-            <div class="container">
-                <div class="card-image-container">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Descubre la Experiencia Linguaventura</h2>
-                    <p>
-                        Nuestro hotel ofrece una inmersión completa en el idioma y la cultura española, diseñada para jóvenes internacionales de 20 a 30 años que buscan algo más que unas vacaciones convencionales. En un entorno natural espectacular, disfrutarás de alojamiento de alta gama combinado con actividades emocionantes, como senderismo, talleres de cocina y deportes acuáticos, todo mientras practicas español con hablantes nativos.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 2: Propuesta de Valor -->
-            <div class="container">
-                <div class="card-content">
-                    <h2 class="card-title">Propuesta de Valor</h2>
-                    <p>
-                        A través de nuestra aplicación exclusiva, podrás seguir tu progreso, alcanzar logros y compartir tu experiencia en redes sociales. Aquí no solo aprenderás un idioma, sino que vivirás una aventura inolvidable que te conectará con nuevas personas, la cultura española y contigo mismo.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 3: Modelo de Negocio -->
-            <div class="container">
-                <div class="card-image-container">
-                
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Nuestros Pilares</h2>
-                    <ul class="card-list">
-                        <li><strong>Inmersión Lingüística:</strong> Clases y actividades diarias con hablantes nativos.</li>
-                        <li><strong>Turismo de Aventura:</strong> Senderismo, deportes acuáticos y visitas culturales.</li>
-                        <li><strong>Sostenibilidad:</strong> Prácticas ecoamigables integradas en todas nuestras operaciones.</li>
-                    </ul>
-                </div>
-            </div>
+<!-- Header -->
+<section class="section_header_business">
+  <div class="container">
+    <div class="header">
+      <div class="box">
+        <h1 style="font-size: 55px">
+          <span class="text-logo"> Modelo de Negocio</span>
+        </h1>
+        <p style="text-align: left">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+          dolores quos asperiores repellendus facilis cum illo aperiam odit
+          doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente
+          quisquam consectetur optio magnam voluptates omnis vel officia alias
+          distinctio quas laborum reiciendis ratione inventore veniam,
+          cupiditate doloribus dolore, eius natus a. Magni inventore
+          consequuntur voluptas reprehenderit perferendis! Molestias aspernatur
+          rem autem aut temporibus.
+        </p>
+        <div class="container_buttons_links_header">
+          <div class="btn">
+            <a
+              href="#"
+              class="btn btn-primary btn-lg mr-2"
+              ,
+              style="background-color: #007bff"
+              >Paper</a
+            >
+          </div>
+          <div class="btn">
+            <a
+              href="{{url_for('light_talk_app.light_talk_app_home')}}"
+              class="btn btn-primary btn-lg mr-2"
+              ,
+              style="background-color: #007bff"
+              >Light Talk App</a
+            >
+          </div>
         </div>
-
-        <div class="footer-links">
-            <p>
-                Conoce más sobre nuestro modelo de negocio 
-                <a href="https://drive.google.com/file/d/1rlOojtrc_ftMdXm9OdoF_Yt645tACBC0/view?usp=sharing" class="cta-link">Plan de negocio</a>.
-            </p>
-        </div>
+      </div>
+      <div class="box">
+        <img
+          src="{{url_for('static', filename='icons/business.svg')}}"
+          width="325"
+          height="325"
+          alt=""
+        />
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- business -->
+<section class="section_body_business">
+  <div class="container">
+    <div class="business" style="display: block">
+      <h1 style="text-align: center">Nuestro Modelo de Negocio</h1>
+      <p>Nuestro modelo de negocio está orientado a …</p>
+    </div>
+
+    <!--Enumerated list (table with two columns)-->
+    <div class="business">
+      <div class="box_table2" style="height: 200px">
+        <div class="h1 mb-3" style="text-align: center">
+          <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <h4 style="text-align: center">Nuestro Canvas Business Model</h4>
+        <p class="text-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+          tenetur.
+        </p>
+      </div>
+      <div class="box_table2" style="height: 200px">
+        <div class="h1 mb-3" style="text-align: center">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <h4 style="text-align: center">Nuestros Valores</h4>
+        <p class="text-left">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas,
+          quidem.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% endblock content %}
